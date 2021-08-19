@@ -245,7 +245,7 @@ otp.util.Itin = {
                 return this.vertexTypeStrings[vertexType] +  " " + place.name;
             } else {
                 if (vertexType !== "NORMAL") {
-                    console.log(vertexType + " not found in strings!");
+                    // console.log(vertexType + " not found in strings!");
                 }
                 return place.name;
             }
