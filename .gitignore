@@ -7,7 +7,6 @@
 .pydevproject
 .settings
 .sonar
-.obj
 *~
 *.ipr
 *.iml
@@ -37,3 +36,4 @@ target/
 
 # for local dev only
 src/ext/resources/reportapi/report.csv
+*.obj
