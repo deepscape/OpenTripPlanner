@@ -297,6 +297,10 @@ public class TripPattern extends TransitEntity implements Cloneable, Serializabl
      * The direction for all the trips in this pattern.
      */
     public Direction getDirection() {
+        if(getTrips().isEmpty()) {
+            return Direction.UNKNOWN;
+        }
+
         return getTrips().get(0).getDirection();
     }
 
@@ -491,7 +495,11 @@ public class TripPattern extends TransitEntity implements Cloneable, Serializabl
                     sb.append(" express");
                 } else {
                     // The final fallback: reference a specific trip ID.
-                    sb.append(" like trip " + pattern.getTrips().get(0).getId());
+                    if(pattern.getTrips().isEmpty()) {
+                        sb.append(" like trip null");
+                    } else {
+                        sb.append(" like trip " + pattern.getTrips().get(0).getId());
+                    }
                 }
                 pattern.setName((sb.toString()));
             } // END foreach PATTERN
