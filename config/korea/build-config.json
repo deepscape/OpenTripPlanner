@@ -1,0 +1,5 @@
+{
+  "fares": "off",
+  "readCachedElevations": "false",
+  "staticParkAndRide": "false"
+}
