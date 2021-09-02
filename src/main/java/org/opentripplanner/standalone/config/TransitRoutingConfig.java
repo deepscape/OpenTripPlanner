@@ -53,7 +53,7 @@ public final class TransitRoutingConfig
         );
         this.transferCacheMaxSize = c.asInt(
                 "transferCacheMaxSize",
-                25
+                100
         );
     }
 

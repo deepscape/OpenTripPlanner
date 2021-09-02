@@ -14,7 +14,7 @@ public interface RaptorTuningParameters {
      * Default value is 12.
      */
     default int maxNumberOfTransfers() {
-        return 12;
+        return 24;
     }
 
     /**
@@ -42,7 +42,7 @@ public interface RaptorTuningParameters {
      * Default value is 60.
      */
     default int iterationDepartureStepInSeconds() {
-        return 60;
+        return 120;
     }
 
     /**
@@ -55,7 +55,7 @@ public interface RaptorTuningParameters {
      * one thread.
      */
     default int searchThreadPoolSize() {
-        return 0;
+        return 16;
     }
 
 

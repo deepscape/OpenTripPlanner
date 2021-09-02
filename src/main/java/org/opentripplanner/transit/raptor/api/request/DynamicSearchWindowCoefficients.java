@@ -37,20 +37,20 @@ public interface DynamicSearchWindowCoefficients {
      * {@code 0.0} to {@code 3.0}. Using {@code 0.0} will eliminate the {@code minTransitTime}
      * from the dynamic raptor-search-window calculation.
      */
-    default double minTransitTimeCoefficient() { return 0.5f; }
+    default double minTransitTimeCoefficient() { return 0.1f; }
 
     /**
      * {@code T} - The coefficient to multiply with {@code minWaitTime}. Use a value between
      * {@code 0.0} to {@code 1.0}. Using {@code 0.0} will eliminate the {@code minWaitTime}
      * from the dynamic raptor-search-window calculation.
      */
-    default double minWaitTimeCoefficient() { return 0.5f; }
+    default double minWaitTimeCoefficient() { return 0.1f; }
 
     /**
      * {@code C} - The constant minimum number of minutes for a raptor search window. Use a value
      * between 20-180 minutes in a normal deployment.
      */
-    default int minWinTimeMinutes() { return 40; }
+    default int minWinTimeMinutes() { return 20; }
 
     /**
      * Set an upper limit to the calculation of the dynamic search window to prevent exceptionable
@@ -62,7 +62,7 @@ public interface DynamicSearchWindowCoefficients {
      * <p>
      * The default is 3 hours. The unit is minutes.
      */
-    default int maxWinTimeMinutes() { return 3 * 60; }
+    default int maxWinTimeMinutes() { return 1; }
 
     /**
      * {@code N} - The search window is rounded of to the closest multiplication of N minutes.
@@ -72,5 +72,5 @@ public interface DynamicSearchWindowCoefficients {
      * Use a value between {@code 1 and 60}. This should be less than the {@code C}
      * (min-raptor-search-window) coefficient.
      */
-    default int stepMinutes() { return 10; }
+    default int stepMinutes() { return 1; }
 }

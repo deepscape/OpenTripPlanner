@@ -18,7 +18,7 @@ import static org.opentripplanner.standalone.config.RoutingRequestMapper.mapRout
  */
 public class RouterConfig implements Serializable {
 
-    private static final double DEFAULT_STREET_ROUTING_TIMEOUT = 5.0;
+    private static final double DEFAULT_STREET_ROUTING_TIMEOUT = 1.0;
     private static final Logger LOG = LoggerFactory.getLogger(RouterConfig.class);
 
     public static final RouterConfig DEFAULT = new RouterConfig(

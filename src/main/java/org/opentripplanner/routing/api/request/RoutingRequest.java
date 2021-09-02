@@ -205,7 +205,7 @@ public class RoutingRequest implements AutoCloseable, Cloneable, Serializable {
      * </ul>
      * Default: true
      */
-    public boolean timetableView = true;
+    public boolean timetableView = false;
 
     /**
      * Whether the trip should depart at dateTime (false, the default), or arrive at dateTime.
@@ -227,7 +227,7 @@ public class RoutingRequest implements AutoCloseable, Cloneable, Serializable {
      * The default value is 50. This is a reasonably high threshold to prevent large amount of data
      * to be returned. Consider tuning the search-window instead of setting this to a small value.
      */
-    public int numItineraries = 50;
+    public int numItineraries = 20;
 
     /** The maximum slope of streets for wheelchair trips. */
     public double maxWheelchairSlope = 0.0833333333333; // ADA max wheelchair ramp slope is a good default.
@@ -294,19 +294,19 @@ public class RoutingRequest implements AutoCloseable, Cloneable, Serializable {
      *  of not wanting to walk too much without asking for totally ridiculous itineraries, but this
      *  observation should in no way be taken as scientific or definitive. Your mileage may vary.
      */
-    public double walkReluctance = 2.0;
+    public double walkReluctance = 12.0;
 
-    public double bikeWalkingReluctance = 5.0;
+    public double bikeWalkingReluctance = 15.0;
 
-    public double bikeReluctance = 2.0;
+    public double bikeReluctance = 12.0;
 
-    public double carReluctance = 2.0;
+    public double carReluctance = 12.0;
 
     /** Used instead of walk reluctance for stairs */
-    public double stairsReluctance = 2.0;
+    public double stairsReluctance = 12.0;
 
     /** Multiplicative factor on expected turning time. */
-    public double turnReluctance = 1.0;
+    public double turnReluctance = 11.0;
 
     /**
      * How long does it take to get an elevator, on average (actually, it probably should be a bit *more* than average, to prevent optimistic trips)?
@@ -539,7 +539,7 @@ public class RoutingRequest implements AutoCloseable, Cloneable, Serializable {
      *
      * @see https://github.com/opentripplanner/OpenTripPlanner/issues/2886
      */
-    public Integer maxTransfers = 12;
+    public Integer maxTransfers = 6;
 
     /**
      * For the bike triangle, how important time is.
