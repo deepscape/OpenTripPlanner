@@ -37,14 +37,14 @@ public interface DynamicSearchWindowCoefficients {
      * {@code 0.0} to {@code 3.0}. Using {@code 0.0} will eliminate the {@code minTransitTime}
      * from the dynamic raptor-search-window calculation.
      */
-    default double minTransitTimeCoefficient() { return 0.1f; }
+    default double minTransitTimeCoefficient() { return 0.15f; }
 
     /**
      * {@code T} - The coefficient to multiply with {@code minWaitTime}. Use a value between
      * {@code 0.0} to {@code 1.0}. Using {@code 0.0} will eliminate the {@code minWaitTime}
      * from the dynamic raptor-search-window calculation.
      */
-    default double minWaitTimeCoefficient() { return 0.1f; }
+    default double minWaitTimeCoefficient() { return 0.15f; }
 
     /**
      * {@code C} - The constant minimum number of minutes for a raptor search window. Use a value

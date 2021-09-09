@@ -206,7 +206,7 @@ public class ItineraryFilterChainBuilder {
         List<ItineraryFilter> filters = new ArrayList<>();
 
         if(minSafeTransferTimeFactor > 0.01) {
-            filters.add(new AddMinSafeTransferCostFilter(minSafeTransferTimeFactor));
+            //filters.add(new AddMinSafeTransferCostFilter(minSafeTransferTimeFactor));
         }
 
         // Sort list on {@code groupByP} in ascending order to keep as many of the elements in the
@@ -230,12 +230,12 @@ public class ItineraryFilterChainBuilder {
 
         // Filter transit itineraries on generalized-cost
         if(transitGeneralizedCostLimit != null) {
-            filters.add(new TransitGeneralizedCostFilter(transitGeneralizedCostLimit));
+            //filters.add(new TransitGeneralizedCostFilter(transitGeneralizedCostLimit));
         }
 
         // Filter non-transit itineraries on generalized-cost
         if(nonTransitGeneralizedCostLimit != null) {
-            filters.add(new NonTransitGeneralizedCostFilter(nonTransitGeneralizedCostLimit));
+            //filters.add(new NonTransitGeneralizedCostFilter(nonTransitGeneralizedCostLimit));
         }
 
         // Apply all absolute filters AFTER the groupBy filters. Absolute filters are filters that
@@ -249,7 +249,7 @@ public class ItineraryFilterChainBuilder {
         // what we want, since both itineraries are none optimal.
         {
             if (removeTransitWithHigherCostThanBestOnStreetOnly) {
-                filters.add(new RemoveTransitIfStreetOnlyIsBetterFilter());
+                //filters.add(new RemoveTransitIfStreetOnlyIsBetterFilter());
             }
 
             if(removeWalkAllTheWayResults) {
@@ -257,7 +257,7 @@ public class ItineraryFilterChainBuilder {
             }
 
             if (latestDepartureTimeLimit != null) {
-                filters.add(new LatestDepartureTimeFilter(latestDepartureTimeLimit));
+                // filters.add(new LatestDepartureTimeFilter(latestDepartureTimeLimit));
             }
 
             if (bikeRentalDistanceRatio > 0) {

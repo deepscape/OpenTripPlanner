@@ -1,18 +1,18 @@
 {
   "routingDefaults": {
-    "walkSpeed": 2.0,
+    "walkSpeed": 1.5,
     "stairsReluctance": 4.0,
     "carDropoffTime": 240,
-    "numItineraries": 6,
+    "numItineraries": 5,
     "groupBySimilarityKeepOne": 0.70
   },
   "transit": {
-    "maxNumberOfTransfers": 4,
+    "maxNumberOfTransfers": 3,
     "scheduledTripBinarySearchThreshold": 50,
     "iterationDepartureStepInSeconds": 60,
-    "searchThreadPoolSize": 16,
+    "searchThreadPoolSize": 32,
     "dynamicSearchWindow": {
-      "minTripTimeCoefficient": 0.1,
+      "minTripTimeCoefficient": 0.15,
       "minTimeMinutes": 1,
       "maxLengthMinutes" : 1,
       "stepMinutes": 1

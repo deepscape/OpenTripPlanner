@@ -14,7 +14,7 @@ public interface RaptorTuningParameters {
      * Default value is 12.
      */
     default int maxNumberOfTransfers() {
-        return 24;
+        return 120;
     }
 
     /**
@@ -54,9 +54,7 @@ public interface RaptorTuningParameters {
      * The default value is 0 - zero. If 0, no extra threads are stated and the search is done in
      * one thread.
      */
-    default int searchThreadPoolSize() {
-        return 16;
-    }
+    default int searchThreadPoolSize() { return 16; }
 
 
     /**
